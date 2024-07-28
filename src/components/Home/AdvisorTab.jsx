@@ -15,5 +15,4 @@ const AdvisorTab = () => {
     </div>
   )
 }
-
 export default AdvisorTab
