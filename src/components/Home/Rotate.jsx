@@ -60,7 +60,7 @@ const Rotate = () => {
     // <div className="flex items-center justify-center border-2 border-red-600">
     <div className="">
       <div className="">
-        <MovingBoxes>
+        <MovingBoxes className={'w-32 h-32 bg-blue-500'}>
         {[...Array(boxCount)].map((_, index) => {
           const { x, y } = calculatePosition(index);
           return (

@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Button from './Button';
+import { RiArrowDownSLine } from "react-icons/ri";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -35,15 +37,18 @@ const Navbar = () => {
                 </div>
                 <div className="flex items-center space-x-4 basis-2/6">
                     <a href="#" className="">Home</a>
-                    <div className="relative" ref={dropdownRef}>
-                        <button onClick={toggleDropdown} className=" focus:outline-none">
-                            Services
+                    <div className="relative flex items-center" ref={dropdownRef}>
+                        <button onClick={toggleDropdown} className=" focus:outline-none me-1">
+                            Schools
                         </button>
+                        <p onClick={toggleDropdown} className='cursor-pointer'>
+                            <RiArrowDownSLine />
+                        </p>
                         {dropdownOpen && (
                             <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md">
-                                <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Product</a>
+                                <Link to={'/product'}  className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Product</Link>
                                 <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Design</a>
-                                <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Tech</a>
+                                <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Engineering</a>
                             </div>
                         )}
                     </div>

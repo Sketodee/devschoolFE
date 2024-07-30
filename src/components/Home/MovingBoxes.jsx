@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const MovingBoxes= ({ children }) => {
+const MovingBoxes= ({ children, className }) => {
   const [positions, setPositions] = useState([
     { x: 0, y: 0 }, { x: 0, y: 0 }, { x: 0, y: 0 },
     { x: 0, y: 0 }, { x: 0, y: 0 }, { x: 0, y: 0 }
@@ -23,7 +23,8 @@ const MovingBoxes= ({ children }) => {
 
   return (
     <div className="flex items-center justify-around h-screen">
-      <div className="relative w-32 h-32 bg-blue-500 rounded-lg shadow-lg">
+      <div className= {`relative rounded-lg shadow-lg ${className}`} >
+      {/* className= "relative w-32 h-32 bg-blue-500 rounded-lg shadow-lg" */}
         {positions.map((pos, index) => (
           <div
             key={index}
