@@ -21,11 +21,21 @@ module.exports = {
           '33%': { boxShadow: '0 0 5px red, 0 0 10px red, 0 0 15px red' },
           '66%': { boxShadow: '0 0 5px green, 0 0 10px green, 0 0 15px green' },
         },
+        scroll :{
+          '0%' : {
+            transform: 'translateX(0)'
+          },
+          '100%' : {
+            transform: 'translateX(-50%)'
+          }
+        }
       },
       animation: {
         shadowPulse: 'shadowPulse 3s infinite',
         shadowPulse2: 'shadowPulse2 3s infinite',
         shadowPulse3: 'shadowPulse3 3s infinite',
+        marquee: 'marquee 20s linear infinite',
+        scroll: 'scroll 10s linear infinite'
       },
     },
   },
