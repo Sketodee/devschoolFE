@@ -55,8 +55,8 @@ const Navbar2 = () => {
           <div className="fixed top-0 left-0 w-[75%] h-full bg-white p-4 shadow-lg z-50">
             <div className="flex flex-col space-y-4">
               <Link to={'/'} onClick={toggleMenu}>Home</Link>
-              <div className='relative flex-col items-center'>
-                <div className="flex items-center border-2 border-red-600">
+              <div className='relative flex-col items-center '>
+                <div className="flex items-center">
                   <button onClick={toggleDropdown} className="focus:outline-none me-1">
                     Schools
                   </button>
