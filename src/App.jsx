@@ -8,6 +8,8 @@ import SchoolOfEngineering from './pages/SchoolOfEngineering'
 import SuccessStories from './components/Home/SuccessStories'
 import SchoolOfData from './pages/SchoolOfData'
 import Navbar2 from './components/Navbar2'
+import HelpPage from './pages/HelpPage'
+import AdvisorTab from './components/Home/AdvisorTab'
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path='/product' element={<SchoolOfProduct />} />
         <Route path='/engineering' element={<SchoolOfEngineering/>} />
         <Route path='/data' element={<SchoolOfData/>} />
+        <Route path='/help' element={<HelpPage/>} />
+        <Route path="/about" element={<AdvisorTab />} />
       </Routes>
       <SuccessStories />
       <Footer />

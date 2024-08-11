@@ -38,8 +38,8 @@ const Navbar2 = () => {
               </div>
             )}
           </div>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+          <Link to={'/#about'}>About</Link>
+          <Link to={'/help'}>Help</Link>
         </div>
         <div className="basis-1/6  justify-end hidden md:flex">
           <Button text={"Apply"} className={"bg-purple-600 hover:bg-gray-100 hover:text-purple-600 text-white"} />
@@ -55,7 +55,7 @@ const Navbar2 = () => {
           <div className="fixed top-0 left-0 w-[75%] h-full bg-white p-4 shadow-lg z-50">
             <div className="flex flex-col space-y-4">
               <Link to={'/'} onClick={toggleMenu}>Home</Link>
-              <div className='relative flex-col items-center '>
+              <div className='relative flex-col items-center'>
                 <div className="flex items-center">
                   <button onClick={toggleDropdown} className="focus:outline-none me-1">
                     Schools
@@ -72,8 +72,8 @@ const Navbar2 = () => {
                   </div>
                 )}
               </div>
-              <a href="#" onClick={toggleMenu}>About</a>
-              <a href="#" onClick={toggleMenu}>Contact</a>
+              <Link to={'/#about'}  onClick={toggleMenu}>About</Link>
+              <Link to={'/help'} onClick={toggleMenu}>Help</Link>
               <div onClick={toggleMenu} >
                 <Button text={"Apply"} className={"bg-purple-600 hover:bg-gray-100 hover:text-purple-600 text-white mt-4"} />
               </div>

@@ -24,11 +24,11 @@ const data = [
 const SchoolOfData = () => {
   return (
     <div className='raleway-500 relative'>
-    <div className='w-[70%] mx-auto py-14 relative h-96'>
-      <h2 className='platypi-400 text-5xl py-5 text-center'>
+    <div className='px-3 sm:px-0 w-full md:w-[70%] mx-auto py-8 sm:py-14 relative h-96'>
+      <h2 className='platypi-400 text-4xl lg:text-5xl py-5 text-center'>
         School of <span className='text-purple-600'>Data</span>
       </h2>
-      <p className='pt-6 w-[70%] mx-auto text-center'>
+      <p className='pt-6 w-full md:w-[70%] mx-auto text-center'>
       Begin your Data learning career and more. Discover career opportunities available for you. Speak to professionals and read through the materials and the programme designed specifically for you.
       </p>
       <div className='relative bottom-32 h-full '>
