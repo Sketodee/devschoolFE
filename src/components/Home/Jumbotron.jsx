@@ -1,8 +1,10 @@
 import React from 'react'
 import Rotate from './Rotate'
 import Button from '../Button'
+import { useModal } from '../../context/ModalContext';
 
 const Jumbotron = () => {
+  const { openModal } = useModal();
   return (
     <div className='lg:flex justify-between items-center raleway-600 px-3 sm:px-0 w-full md:w-[70%] mx-auto'>
       <div className="lg:basis-3/5 hidden md:block">
@@ -13,7 +15,7 @@ const Jumbotron = () => {
           Accelerate your Career with <span className='text-purple-600'>Endless Growth</span>
         </h3>
         <p className='w-full lg:w-3/5 text-gray-700'>Begin your tech journey and expand your career opportunities in the tech space by learning tech skills in demand.</p>
-        <Button text={"Apply"} className={"bg-purple-600 my-5 text-white"} />
+        <Button  onClick={openModal} text={"Apply"} className={"bg-purple-600 my-5 text-white"} />
       </div>
     </div>
 

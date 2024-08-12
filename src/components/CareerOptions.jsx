@@ -2,8 +2,10 @@ import React from 'react'
 import { TbClockHour3Filled } from "react-icons/tb";
 import { PiCalendarDotsFill } from "react-icons/pi";
 import Button from './Button';
+import { useModal } from '../context/ModalContext';
 
 const CareerOptions = ({data}) => {
+    const { openModal } = useModal();
     return (
         <div>
           {data.map((item, index) => (
@@ -26,7 +28,7 @@ const CareerOptions = ({data}) => {
                         <p>{item.startDate}</p>
                     </div>
                 </div>
-                <Button text={"Apply"} className={item.buttonStyle} />
+                <Button  onClick={openModal} text={"Apply"} className={item.buttonStyle} />
             </div>
         </div>
           ))}

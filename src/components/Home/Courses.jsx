@@ -1,7 +1,9 @@
 import React from 'react'
 import Button from '../../components/Button'
+import { useNavigate } from 'react-router-dom'
 
 const Courses = () => {
+    const navigate = useNavigate();
     return (
         <div className='raleway-500 py-10 w-full px-3 sm:px-0 md:w-[70%] mx-auto'>
             <div className="text-center">
@@ -15,7 +17,7 @@ const Courses = () => {
                     <div className="px-4">
                         <p className='py-5 text-2xl font-bold'>Backend Development </p>
                         <p>Begin our back-end development program structured to help students launch a new career in web development.</p>
-                        <Button text={"Learn More"} className={"bg-purple-600 my-5 text-white"} />
+                        <Button onClick={() => navigate('/engineering')} text={"Learn More"} className={"bg-purple-600 my-5 text-white"} />
                     </div>
                 </div>
 
@@ -24,7 +26,7 @@ const Courses = () => {
                     <div className="px-4">
                         <p className='py-5 text-2xl font-bold'>Frontend Development </p>
                         <p>Begin our front-end development program structured to help students launch a new career in web development.</p>
-                        <Button text={"Learn More"} className={"bg-purple-600 my-5 text-white"} />
+                        <Button onClick={() => navigate('/engineering')}  text={"Learn More"} className={"bg-purple-600 my-5 text-white"} />
                     </div>
                 </div>
 
@@ -33,7 +35,7 @@ const Courses = () => {
                     <div className="px-4">
                         <p className='py-5 text-2xl font-bold'>Product Management </p>
                         <p>The management program is taught by prominent product management experts in the tech industry.</p>
-                        <Button text={"Learn More"} className={"bg-purple-600 my-5 text-white"} />
+                        <Button onClick={() => navigate('/product')}  text={"Learn More"} className={"bg-purple-600 my-5 text-white"} />
                     </div>
                 </div>
 
@@ -42,7 +44,7 @@ const Courses = () => {
                     <div className="px-4">
                         <p className='py-5 text-2xl font-bold'>Product Design</p>
                         <p>Design user experiences for products in today's digital world. Build a portfolio that showcases your ability to transform products.</p>
-                        <Button text={"Learn More"} className={"bg-purple-600 my-5 text-white"} />
+                        <Button onClick={() => navigate('/product')}  text={"Learn More"} className={"bg-purple-600 my-5 text-white"} />
                     </div>
                 </div>
 
@@ -51,7 +53,7 @@ const Courses = () => {
                     <div className="px-4">
                         <p className='py-5 text-2xl font-bold'>Data</p>
                         <p>Use Python, SQL, and statistics to uncover insights, communicate critical findings, and create data-driven solutions</p>
-                        <Button text={"Learn More"} className={"bg-purple-600 my-5 text-white"} />
+                        <Button onClick={() => navigate('/data')}  text={"Learn More"} className={"bg-purple-600 my-5 text-white"} />
                     </div>
                 </div>
             </div>

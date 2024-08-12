@@ -10,6 +10,10 @@ import SchoolOfData from './pages/SchoolOfData'
 import Navbar2 from './components/Navbar2'
 import HelpPage from './pages/HelpPage'
 import AdvisorTab from './components/Home/AdvisorTab'
+import ApplicationModal from './components/ApplicationModal'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   return (
@@ -26,6 +30,8 @@ function App() {
       </Routes>
       <SuccessStories />
       <Footer />
+      <ApplicationModal />
+      <ToastContainer />
     </div>
   )
 }
