@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { RiArrowDownSLine, RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import Button from './Button'; // Assume you have a Button component
+import { useModal } from '../context/ModalContext';
 
 const Navbar2 = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const { openModal } = useModal();
 
   const toggleDropdown = (event) => {
     event.stopPropagation();
@@ -19,7 +22,7 @@ const Navbar2 = () => {
     <nav className="p-4 raleway-600 w-full lg:w-[70%] mx-auto">
       <div className="container mx-auto flex items-center justify-between">
         <div className="text-2xl font-bold basis-3/6">
-          <a href="#">Logo</a>
+          <Link to={'/'}>Logo</Link>
         </div>
         <div className="hidden md:flex items-center space-x-4 basis-2/6">
           <Link to={'/'}>Home</Link>
@@ -42,7 +45,7 @@ const Navbar2 = () => {
           <Link to={'/help'}>Help</Link>
         </div>
         <div className="basis-1/6  justify-end hidden md:flex">
-          <Button text={"Apply"} className={"bg-purple-600 hover:bg-gray-100 hover:text-purple-600 text-white"} />
+          <Button  onClick={openModal} text={"Apply"} className={"bg-purple-600 hover:bg-gray-100 hover:text-purple-600 text-white"} />
         </div>
         <div className="flex md:hidden">
           <button onClick={toggleMenu} className="text-2xl">
@@ -75,7 +78,7 @@ const Navbar2 = () => {
               <Link to={'/#about'}  onClick={toggleMenu}>About</Link>
               <Link to={'/help'} onClick={toggleMenu}>Help</Link>
               <div onClick={toggleMenu} >
-                <Button text={"Apply"} className={"bg-purple-600 hover:bg-gray-100 hover:text-purple-600 text-white mt-4"} />
+                <Button onClick={openModal} text={"Apply"} className={"bg-purple-600 hover:bg-gray-100 hover:text-purple-600 text-white mt-4"} />
               </div>
 
             </div>
