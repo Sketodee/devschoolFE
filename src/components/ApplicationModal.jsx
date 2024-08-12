@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Modal from './Modal'
 import { useModal } from '../context/ModalContext';
 import apis from '../api/apis';
@@ -109,6 +109,44 @@ const ApplicationModal = () => {
     });
 
 
+    //--------- for dorpdown option----
+
+    const [isOpen, setIsOpen] = useState(false);
+    const [selectedOption, setSelectedOption] = useState("");
+    const dropdownMenuRef = useRef(null);
+    const caretRef = useRef(null);
+
+    const toggleDropdown = (event) => {
+        event.stopPropagation();
+        setIsOpen(!isOpen);
+    };
+
+    const selectOption = (option) => {
+        setSelectedOption(option);
+        setFormData(prev => ({ ...prev, course: option }))
+        setErrors(prev => ({...prev, course: ''}))
+        console.log(formData)
+        setIsOpen(false);
+    };
+
+    const handleOutsideClick = (event) => {
+        if (dropdownMenuRef.current && !dropdownMenuRef.current.contains(event.target)) {
+            setIsOpen(false);
+        }
+    };
+
+    useEffect(() => {
+        if (caretRef.current) {
+            caretRef.current.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+
+        document.addEventListener("click", handleOutsideClick);
+        return () => {
+            document.removeEventListener("click", handleOutsideClick);
+        };
+    }, [isOpen]);
+
+
     return (
         <Modal >
             <h2 className="text-xl font-medium py-2">Apply</h2>
@@ -176,30 +214,99 @@ const ApplicationModal = () => {
                         {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                     </div>
 
-                    <div className="py-2 basis-1/2">
-                        <label htmlFor="course" className="block text-sm ">Course</label>
-                        <select
-                            id="course"
-                            name="course"
-                            value={formData.course}
-                            onChange={handleChange}
-                            className="mt-1 block w-full px-3 py-2 border  border-purple-200 rounded-lg focus:outline-none focus:border-purple-500"
-                        >
-                            <option value="">Select an Option</option>
-                            <option value="Frontend Development">Frontend Development</option>
-                            <option value="Backend Development"> Backend Development </option>
-                            <option value="Data Science"> Data Science </option>
-                            <option value="Product Design"> Product Design</option>
-                            <option value="Product Management"> Product Management </option>
-                        </select>
-                        {errors.course && <p className="text-red-500 text-xs mt-1">{errors.course}</p>}
+                    <div className="py-2 basis-1/2 ">
+                        <label htmlFor="course" className="block text-sm pb-1">Course</label>
+                        <div className="relative inline-block w-full text-left">
+                            <div>
+                                <button
+                                    id="dropdown-button"
+                                    type="button"
+                                    className="inline-flex justify-center items-center w-full px-3 py-2 border  border-purple-200 rounded-lg focus:outline-none focus:border-purple-500 "
+                                    aria-haspopup="true"
+                                    aria-expanded={isOpen ? "true" : "false"}
+                                    onClick={toggleDropdown}
+                                >
+                                    <span id="dropdown-selected-option" className="w-full text-left overflow-hidden flex-1">{selectedOption ? selectedOption : 'Select a course'}</span>
+                                    <svg
+                                        ref={caretRef}
+                                        className="ml-2.5 -mr-1.5 h-5 w-5"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M6.293 7.293a1 1 0 011.414 0L10 9.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                                            clipRule="evenodd"
+                                        />
+                                    </svg>
+                                </button>
+                                {errors.course && <p className="text-red-500 text-xs mt-1">{errors.course}</p>}
+                            </div>
+                            {isOpen && (
+                                <div
+                                    ref={dropdownMenuRef}
+                                    id="dropdown-menu"
+                                    className=" w-full left-0 mt-2 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                                    role="menu"
+                                    aria-orientation="vertical"
+                                    aria-labelledby="dropdown-button"
+                                    tabIndex={-1}
+                                >
+                                    <div className="py-1 h-24 overflow-auto" role="none">
+                                        <a
+                                            href="#"
+                                            className="block px-4 py-2 text-left text-sm hover:bg-purple-100 "
+                                            role="menuitem"
+                                            onClick={() => selectOption("Frontend Development")}
+                                        >
+                                            Frontend Development
+                                        </a>
+                                        <a
+                                            href="#"
+                                            className="block px-4 py-2 text-left text-sm hover:bg-purple-100 "
+                                            role="menuitem"
+                                            onClick={() => selectOption("Backend Development")}
+                                        >
+                                            Backend Development
+                                        </a>
+                                        <a
+                                            href="#"
+                                            className="block px-4 py-2 text-left text-sm hover:bg-purple-100 "
+                                            role="menuitem"
+                                            onClick={() => selectOption("Product Management")}
+                                        >
+                                            Product Management
+                                        </a>
+                                        <a
+                                            href="#"
+                                            className="block px-4 py-2 text-left text-sm hover:bg-purple-100 "
+                                            role="menuitem"
+                                            onClick={() => selectOption("Product Design")}
+                                        >
+                                            Product Design
+                                        </a>
+                                        <a
+                                            href="#"
+                                            className="block px-4 py-2 text-left text-sm hover:bg-purple-100 "
+                                            role="menuitem"
+                                            onClick={() => selectOption("Data Analysis")}
+                                        >
+                                            Data Analysis
+                                        </a>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
                     </div>
 
                 </div>
 
 
+
+
+
                 <div className="flex justify-end">
-                    <button disabled= {isLoading} type="submit" className="relative mt-2 px-3 py-2 rounded-lg bg-purple-600  text-white">
+                    <button disabled={isLoading} type="submit" className="relative mt-2 px-3 py-2 rounded-lg bg-purple-600  text-white">
                         {isLoading && (
                             <span className="absolute inset-0 flex items-center justify-center">
                                 <div className="w-6 h-6 border-2 border-t-transparent border-white border-solid rounded-full animate-spin"></div>
