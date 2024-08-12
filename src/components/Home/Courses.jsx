@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../../components/Button'
 import { useNavigate } from 'react-router-dom'
+import LazyImage from '../../components/LazyImage'
 
 const Courses = () => {
     const navigate = useNavigate();
@@ -13,7 +14,8 @@ const Courses = () => {
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-1'>
 
                 <div className='basis-1/3 px-0 sm:px-2 pb-5'>
-                    <img className='h-80 w-full object-cover' src="/course3.jpg" alt="" />
+                    {/* <img className='h-80 w-full object-cover' src="/course3.webp" alt="" /> */}
+                    <LazyImage className={'h-80 w-full object-cover'} alt={''} src={'/course3.webp'} />
                     <div className="px-4">
                         <p className='py-5 text-2xl font-bold'>Backend Development </p>
                         <p>Begin our back-end development program structured to help students launch a new career in web development.</p>
@@ -22,7 +24,8 @@ const Courses = () => {
                 </div>
 
                 <div className='basis-1/3 px-2 pb-5'>
-                    <img className='h-80 w-full object-cover' src="/course4.jpg" alt="" />
+                    {/* <img className='h-80 w-full object-cover' src="/course4.webp" alt="" /> */}
+                    <LazyImage className={'h-80 w-full object-cover'} alt={''} src={'/course4.webp'} />
                     <div className="px-4">
                         <p className='py-5 text-2xl font-bold'>Frontend Development </p>
                         <p>Begin our front-end development program structured to help students launch a new career in web development.</p>
@@ -31,7 +34,8 @@ const Courses = () => {
                 </div>
 
                 <div className='basis-1/3 px-2 pb-5'>
-                    <img className='h-80 w-full object-cover' src="/course5.jpg" alt="" />
+                    {/* <img className='h-80 w-full object-cover' src="/course5.webp" alt="" /> */}
+                    <LazyImage className={'h-80 w-full object-cover'} alt={''} src={'/course5.webp'} />
                     <div className="px-4">
                         <p className='py-5 text-2xl font-bold'>Product Management </p>
                         <p>The management program is taught by prominent product management experts in the tech industry.</p>
@@ -40,7 +44,8 @@ const Courses = () => {
                 </div>
 
                 <div className='basis-1/3 px-2 pb-5'>
-                    <img className='h-80 w-full object-cover' src="/course1.jpg" alt="" />
+                    {/* <img className='h-80 w-full object-cover' src="/course1.webp" alt="" /> */}
+                    <LazyImage className={'h-80 w-full object-cover'} alt={''} src={'/course1.webp'} />
                     <div className="px-4">
                         <p className='py-5 text-2xl font-bold'>Product Design</p>
                         <p>Design user experiences for products in today's digital world. Build a portfolio that showcases your ability to transform products.</p>
@@ -49,7 +54,8 @@ const Courses = () => {
                 </div>
 
                 <div className='basis-1/3 px-2 pb-5'>
-                    <img className='h-80 w-full object-cover' src="/course2.jpg" alt="" />
+                    {/* <img className='h-80 w-full object-cover' src="/course2.webp" alt="" /> */}
+                    <LazyImage className={'h-80 w-full object-cover'} alt={''} src={'/course2.webp'} />
                     <div className="px-4">
                         <p className='py-5 text-2xl font-bold'>Data</p>
                         <p>Use Python, SQL, and statistics to uncover insights, communicate critical findings, and create data-driven solutions</p>
