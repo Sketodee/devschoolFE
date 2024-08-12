@@ -1,4 +1,5 @@
 import React from 'react'
+import LazyImage from '../LazyImage'
 
 const AdvisorTab = () => {
   return (
@@ -10,7 +11,8 @@ const AdvisorTab = () => {
             <p className='w-[70%]'>Speak with our professional tech advisors to help kick start your tech journey and pilot you to being an expert in your desired field.</p>
           </div>
           <div className='basis-1/2'>
-            <img src="/Shrug-cuate.png" alt="" />
+            {/* <img src="/Shrug-cuate.webp" alt="" /> */}
+            <LazyImage className={''} alt={''} src={'/Shrug-cuate.webp'} />
           </div>
         </div>
       </div>
@@ -20,7 +22,8 @@ const AdvisorTab = () => {
           <p className='platypi-400 w-full md:w-[70%] text-4xl lg:text-5xl py-10 text-white'> Get onboard with us </p>
           <div className='text-white md:flex justify-between items-center'>
             <div className='basis-1/2'>
-              <img src="/Professor-pana.png" alt="" />
+              {/* <img src="/Professor-pana.webp" alt="" /> */}
+              <LazyImage className={''} alt={''} src={'/Professor-pana.webp'} />
             </div>
             <div className='basis-1/2'>
               <p className='platypi-400 w-full md:w-[70%] text-9xl pb-4'> " </p>
