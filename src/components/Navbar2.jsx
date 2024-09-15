@@ -22,7 +22,7 @@ const Navbar2 = () => {
     <nav className="p-4 raleway-600 w-full lg:w-[70%] mx-auto">
       <div className="container mx-auto flex items-center justify-between">
         <div className="text-2xl font-bold basis-3/6">
-          <Link to={'/'}>Logo</Link>
+          <Link to={'/'}> <img className='h-8 md:h-16' src="/kodexxarlogo.png" alt="" /> </Link>
         </div>
         <div className="hidden md:flex items-center space-x-4 basis-2/6">
           <Link to={'/'}>Home</Link>

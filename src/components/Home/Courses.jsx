@@ -6,7 +6,7 @@ import LazyImage from '../../components/LazyImage'
 const Courses = () => {
     const navigate = useNavigate();
     return (
-        <div className='raleway-500 py-10 w-full px-3 sm:px-0 md:w-[70%] mx-auto'>
+        <div className='raleway-500 py-10 w-full px-3 sm:px-0 md:w-[90%] lg:w-[70%] mx-auto'>
             <div className="text-center">
                 <h2 className='platypi-400 text-4xl lg:text-5xl text-purple-600 py-5'>Our Courses</h2>
                 <p className='pb-10'> Here are some courses from our schools that we offer. Enroll and kickstart your tech career.</p>
