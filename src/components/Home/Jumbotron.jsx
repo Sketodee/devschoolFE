@@ -6,8 +6,8 @@ import { useModal } from '../../context/ModalContext';
 const Jumbotron = () => {
   const { openModal } = useModal();
   return (
-    <div className='lg:flex justify-between items-center raleway-600 px-3 sm:px-0 w-full md:w-[70%] mx-auto'>
-      <div className="lg:basis-3/5 hidden md:block">
+    <div className='lg:flex justify-between items-center raleway-600 px-3 sm:px-0 w-full md:w-[90%] mx-auto'>
+      <div className="lg:basis-3/5 hidden lg:block">
         <Rotate />
       </div>
       <div className='lg:basis-2/5'>
