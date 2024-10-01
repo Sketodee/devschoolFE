@@ -40,12 +40,12 @@ const SchoolOfEngineering = () => {
 
         <div className="max-w-4xl mx-auto mt-5 bg-white rounded-2xl shadow-xl overflow-hidden ">
           <div className="bg-purple-500 text-white py-8 px-6 text-center">
-            <h1 className="text-3xl font-bold mb-2">Web Development Mastery</h1>
-            <p className="text-xl">Unlock the secrets of building stunning, user-friendly websites and applications!</p>
+            <h1 className="text-xl md:text-3xl font-bold mb-2">Web Development Mastery</h1>
+            <p className="text-sm md:text-xl">Unlock the secrets of building stunning, user-friendly websites and applications!</p>
           </div>
 
           <div className="p-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Why Register:</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6">Why Register:</h2>
             <ul className="space-y-4 mb-8">
               {[
                 { icon: FaCode, text: "Learn HTML, CSS, JavaScript, and frameworks like React and Angular" },
@@ -61,7 +61,7 @@ const SchoolOfEngineering = () => {
               ))}
             </ul>
 
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Registration Benefits:</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6">Registration Benefits:</h2>
             <ul className="space-y-4 mb-8">
               {[
                 { icon: FaUserTie, text: "Expert instructor guidance" },
@@ -86,12 +86,12 @@ const SchoolOfEngineering = () => {
 
           <div className="max-w-4xl mx-auto mt-5 bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="bg-purple-500 text-white py-8 px-6 text-center">
-              <h1 className="text-3xl font-bold mb-2">Back-end Development Mastery</h1>
-              <p className="text-xl">Dive into the world of server-side programming and data management!</p>
+              <h1 className="text-xl md:text-3xl font-bold mb-2">Back-end Development Mastery</h1>
+              <p className="text-sm md:text-xl">Dive into the world of server-side programming and data management!</p>
             </div>
 
             <div className="p-8">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">Why Register:</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6">Why Register:</h2>
               <ul className="space-y-4 mb-8">
                 {[
                   { icon: FaCode, text: "Learn programming languages like Python, Ruby, and PHP" },
@@ -107,7 +107,7 @@ const SchoolOfEngineering = () => {
                 ))}
               </ul>
 
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">Registration Benefits:</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6">Registration Benefits:</h2>
               <ul className="space-y-4 mb-8">
                 {[
                   { icon: FaUserTie, text: "Expert mentorship" },
