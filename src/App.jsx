@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Footer from './components/Footer'
 import { Route, Routes } from 'react-router-dom'
@@ -18,10 +17,8 @@ import ParticleBg from './components/ParticleBg'
 
 function App() {
   return (
-    <div className='min-h-screen flex flex-col'>
-      <ParticleBg />
-      {/* <Navbar /> */}
-      <div className="z-50">
+    // < className='min-h-screen flex flex-col'>
+      <div className="">
         <Navbar2 />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -36,7 +33,6 @@ function App() {
         <ApplicationModal />
         <ToastContainer />
       </div>
-    </div>
   )
 }
 

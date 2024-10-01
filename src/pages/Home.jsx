@@ -1,9 +1,8 @@
-
 import AdvisorTab from '../components/Home/AdvisorTab'
 import Courses from '../components/Home/Courses'
-import Jumbotron from '../components/Home/Jumbotron'
 import React,{useEffect} from 'react'
 import { useLocation } from 'react-router-dom'
+import SophisticatedJumbotron from '../components/Home/SophisticatedJumbotron'
 
 const Home = () => {
   const location = useLocation();
@@ -19,7 +18,7 @@ const Home = () => {
 
   return (
     <div>
-        <Jumbotron />
+      <SophisticatedJumbotron/>
         <Courses />
         <div id="about">
           <AdvisorTab />
