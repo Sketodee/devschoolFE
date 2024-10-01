@@ -41,12 +41,12 @@ const SchoolOfData = () => {
 
       <div className="max-w-4xl mx-auto mt-5 bg-white rounded-2xl shadow-xl overflow-hidden">
         <div className="bg-purple-500 text-white py-8 px-6 text-center">
-          <h1 className="text-3xl font-bold mb-2">Data Science Mastery</h1>
-          <p className="text-xl">Unlock insights from data!</p>
+          <h1 className="text-xl md:text-3xl font-bold mb-2">Data Science Mastery</h1>
+          <p className="text:sm md:text-xl">Unlock insights from data!</p>
         </div>
         
         <div className="p-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">Why Register:</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6">Why Register:</h2>
           <ul className="space-y-4 mb-8">
             {[
               { icon: FaChartBar, text: "Learn data visualization, machine learning, and statistical analysis" },
@@ -62,7 +62,7 @@ const SchoolOfData = () => {
             ))}
           </ul>
 
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">Registration Benefits:</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6">Registration Benefits:</h2>
           <ul className="space-y-4 mb-8">
             {[
               { icon: FaUserTie, text: "Expert mentorship" },

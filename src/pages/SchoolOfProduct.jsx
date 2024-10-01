@@ -49,12 +49,12 @@ const SchoolOfProduct = () => {
 
         <div className="max-w-4xl mx-auto mt-5 bg-white rounded-2xl shadow-xl overflow-hidden">
           <div className="bg-purple-500 text-white py-8 px-6 text-center">
-            <h1 className="text-3xl font-bold mb-2">Product Management Mastery</h1>
-            <p className="text-xl">Transform ideas into successful products!</p>
+            <h1 className="text-xl md:text-3xl font-bold mb-2">Product Management Mastery</h1>
+            <p className="text-sm md:text-xl">Transform ideas into successful products!</p>
           </div>
 
           <div className="p-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Why Register:</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6">Why Register:</h2>
             <ul className="space-y-4 mb-8">
               {[
                 { icon: FaLightbulb, text: "Learn product development life cycles, market research, and customer validation" },
@@ -70,7 +70,7 @@ const SchoolOfProduct = () => {
               ))}
             </ul>
 
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">Registration Benefits:</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6">Registration Benefits:</h2>
             <ul className="space-y-4 mb-8">
               {[
                 { icon: FaClipboardCheck, text: "Interactive workshops and case studies" },
@@ -95,12 +95,12 @@ const SchoolOfProduct = () => {
 
         <div className="max-w-4xl mx-auto mt-5 bg-white rounded-2xl shadow-xl overflow-hidden">
         <div className="bg-purple-500 text-white py-8 px-6 text-center">
-          <h1 className="text-3xl font-bold mb-2">Product Design Mastery</h1>
-          <p className="text-xl">Craft intuitive, user-centered designs!</p>
+          <h1 className="text-xl md:text-3xl font-bold mb-2">Product Design Mastery</h1>
+          <p className="text-sm md:text-xl">Craft intuitive, user-centered designs!</p>
         </div>
         
         <div className="p-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">Why Register:</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6">Why Register:</h2>
           <ul className="space-y-4 mb-8">
             {[
               { icon: FaPencilRuler, text: "Learn human-centered design principles, wireframing, and prototyping" },
@@ -115,7 +115,7 @@ const SchoolOfProduct = () => {
             ))}
           </ul>
 
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">Registration Benefits:</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6">Registration Benefits:</h2>
           <ul className="space-y-4 mb-8">
             {[
               { icon: FaUserTie, text: "Expert design mentorship" },
