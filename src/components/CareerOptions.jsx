@@ -28,7 +28,7 @@ const CareerOptions = ({data}) => {
                         <p>{item.startDate}</p>
                     </div>
                 </div>
-                <Button  onClick={openModal} text={"Apply"} className={item.buttonStyle} />
+                {/* <Button  onClick={openModal} text={"Apply"} className={item.buttonStyle} /> */}
             </div>
         </div>
           ))}

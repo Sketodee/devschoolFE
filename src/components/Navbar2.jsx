@@ -22,7 +22,7 @@ const Navbar2 = () => {
     <nav className="p-4 raleway-600 w-full lg:w-[70%] mx-auto">
       <div className="container mx-auto flex items-center justify-between">
         <div className="text-2xl font-bold basis-3/6">
-          <Link to={'/'}> <img className='h-8 md:h-16' src="/kodexxarlogo.png" alt="" /> </Link>
+          <Link to={'/'}> <img className='h-8 md:h-8' src="/kodexxarlogo.png" alt="" /> </Link>
         </div>
         <div className="hidden md:flex items-center space-x-4 basis-2/6">
           <Link to={'/'}>Home</Link>
@@ -45,7 +45,7 @@ const Navbar2 = () => {
           <Link to={'/help'}>Help</Link>
         </div>
         <div className="basis-1/6  justify-end hidden md:flex">
-          <Button  onClick={openModal} text={"Apply"} className={"bg-purple-600 hover:bg-gray-100 hover:text-purple-600 text-white"} />
+          <Button  onClick={openModal} text={"Apply"} className={""} />
         </div>
         <div className="flex md:hidden">
           <button onClick={toggleMenu} className="text-2xl">
@@ -78,7 +78,7 @@ const Navbar2 = () => {
               <Link to={'/#about'}  onClick={toggleMenu}>About</Link>
               <Link to={'/help'} onClick={toggleMenu}>Help</Link>
               <div onClick={toggleMenu} >
-                <Button onClick={openModal} text={"Apply"} className={"bg-purple-600 hover:bg-gray-100 hover:text-purple-600 text-white mt-4"} />
+                <Button onClick={openModal} text={"Apply"} className={"mt-4"} />
               </div>
 
             </div>
