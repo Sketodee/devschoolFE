@@ -1,13 +1,14 @@
 import React from 'react'
 import { FaXTwitter } from "react-icons/fa6";
 import { BsInstagram } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
         <div className='bg-purple-600 py-8 raleway-500 mt-auto'>
             <div className='w-full md:w-[70%] mx-auto text-white md:flex justify-between items-start px-3 sm:px-0'>
                 <div className='basis-1/4'>
-                    <p className='text-2xl font-bold'>Logo</p>
+                <Link to={'/'}> <img className='h-8 md:h-8' src="/kodexxarlogowhite.png" alt="" /> </Link>
                     <p className='text-sm pt-4'>An organization that is focused on equipping African youths with the knowledge and skills needed in the tech space.</p>
                     <div className="flex py-4">
                         <p><FaXTwitter /></p>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Homeslider from './Homeslider'
+import Reviews from './Reviews'
 
 const SuccessStories = () => {
   return (
@@ -8,7 +8,7 @@ const SuccessStories = () => {
             <p className='platypi-400 text-4xl lg:text-5xl text-purple-600'>Our Success Stories</p>
             <p className='pt-5'>What our students are saying about their learning experience.</p>
         </div>
-        <Homeslider />
+        <Reviews />
     </div>
   )
 }
