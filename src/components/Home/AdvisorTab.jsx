@@ -5,7 +5,7 @@ import { FaGraduationCap, FaHandshake, FaLightbulb, FaUsers } from 'react-icons/
 const AdvisorTab = () => {
   return (
     <div>
-      <div className='bg-purple-400 py-8 raleway-500'>
+      <div className='bg-gradient-to-r from-purple-500 to-purple-700 py-8 raleway-500'>
         <div className='px-3 sm:px-0 w-full md:w-[90%] lg:w-[70%] mx-auto text-white md:flex justify-between items-center'>
           <div className='basis-1/2'>
             <p className='platypi-400 w-full md:w-[70%] text-4xl lg:text-5xl  pb-4'> Confused about what to learn?</p>
