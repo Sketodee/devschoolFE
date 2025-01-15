@@ -30,7 +30,7 @@ const Countdown = () => {
 
   return (
     <div className="h-screen flex flex-col items-center justify-center bg-purple-600">
-        <p className='text-xl md:text-4xl text-white py-5'>Kodexarr is coming ...</p>
+        <p className='text-xl md:text-4xl text-white py-5'>Kodexxar is coming ...</p>
       <div className="md:flex text-center space-x-2 text-white">
         {Object.entries(timeLeft).map(([unit, value], index, arr) => (
           <div key={unit} className="flex items-end">
