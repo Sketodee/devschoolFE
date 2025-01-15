@@ -13,13 +13,15 @@ import ApplicationModal from './components/ApplicationModal'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ParticleBg from './components/ParticleBg'
+import Countdown from './components/Countdown'
 
 
 function App() {
   return (
     // < className='min-h-screen flex flex-col'>
       <div className="">
-        <Navbar2 />
+        <Countdown /> 
+        {/* <Navbar2 />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/product' element={<SchoolOfProduct />} />
@@ -31,7 +33,7 @@ function App() {
         <SuccessStories />
         <Footer />
         <ApplicationModal />
-        <ToastContainer />
+        <ToastContainer /> */}
       </div>
   )
 }
